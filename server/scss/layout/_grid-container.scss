@@ -1,0 +1,14 @@
+.grid {
+    @extend %clearfix;
+    @extend .centered;
+    width: 90%;
+    // Make nested grid 100%
+    [class*="grid-col--" ] > & {
+        width: 100%;
+        
+    }
+    // Set a max-width for container
+    @media (min-width: 1100px) {
+        max-width: $g-cont-max-w;
+    }
+}

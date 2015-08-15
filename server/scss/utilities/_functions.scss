@@ -1,0 +1,16 @@
+// ==========================================================================
+// Functions
+// ==========================================================================
+
+// Calculate em values
+@function em($target, $context: $base-font-size) {
+	@return ($target / $context) * 1em;
+}
+
+// Set the "context" width for the grid
+@function g-context($g-col-width, $g-col-count, $g-gutter-width) {
+   $g-col-width-total: ($g-col-width * $g-col-count);
+   $g-gutter-with-total: ($g-gutter-width * ($g-col-count - 1));
+   $g-context: ($g-col-width-total +  $g-gutter-with-total);
+   @return $g-context;
+}
