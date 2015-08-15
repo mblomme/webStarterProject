@@ -67,86 +67,76 @@ h1 {
 }
 
 @media (min-width: 769px) {
-  /* line 7, ../server/scss/layout/_grid-columns.scss */
+  /* line 79, ../server/scss/utilities/_mixins.scss */
   .grid-col--1 {
     width: 6.5%;
   }
-
-  /* line 7, ../server/scss/layout/_grid-columns.scss */
+  /* line 79, ../server/scss/utilities/_mixins.scss */
   .grid-col--2 {
     width: 15%;
   }
-
-  /* line 7, ../server/scss/layout/_grid-columns.scss */
+  /* line 79, ../server/scss/utilities/_mixins.scss */
   .grid-col--3 {
     width: 23.5%;
   }
-
-  /* line 7, ../server/scss/layout/_grid-columns.scss */
+  /* line 79, ../server/scss/utilities/_mixins.scss */
   .grid-col--4 {
     width: 32%;
   }
-
-  /* line 7, ../server/scss/layout/_grid-columns.scss */
+  /* line 79, ../server/scss/utilities/_mixins.scss */
   .grid-col--5 {
     width: 40.5%;
   }
-
-  /* line 7, ../server/scss/layout/_grid-columns.scss */
+  /* line 79, ../server/scss/utilities/_mixins.scss */
   .grid-col--6 {
     width: 49%;
   }
-
-  /* line 7, ../server/scss/layout/_grid-columns.scss */
+  /* line 79, ../server/scss/utilities/_mixins.scss */
   .grid-col--7 {
     width: 57.5%;
   }
-
-  /* line 7, ../server/scss/layout/_grid-columns.scss */
+  /* line 79, ../server/scss/utilities/_mixins.scss */
   .grid-col--8 {
     width: 66%;
   }
-
-  /* line 7, ../server/scss/layout/_grid-columns.scss */
+  /* line 79, ../server/scss/utilities/_mixins.scss */
   .grid-col--9 {
     width: 74.5%;
   }
-
-  /* line 7, ../server/scss/layout/_grid-columns.scss */
+  /* line 79, ../server/scss/utilities/_mixins.scss */
   .grid-col--10 {
     width: 83%;
   }
-
-  /* line 7, ../server/scss/layout/_grid-columns.scss */
+  /* line 79, ../server/scss/utilities/_mixins.scss */
   .grid-col--11 {
     width: 91.5%;
   }
-
-  /* line 7, ../server/scss/layout/_grid-columns.scss */
+  /* line 79, ../server/scss/utilities/_mixins.scss */
   .grid-col--12 {
     width: 100%;
   }
 }
-@media (min-width: 1px) and (max-width: 768) {
-  /* line 14, ../server/scss/layout/_grid-columns.scss */
+
+@media (min-width: 1px) and (max-width: 768px) {
+  /* line 9, ../server/scss/layout/_grid-columns.scss */
   [class^="grid-col--"] {
     margin-top: 0.75em;
     margin-bottom: 0.75em;
   }
 }
 @media (min-width: 769px) {
-  /* line 14, ../server/scss/layout/_grid-columns.scss */
+  /* line 9, ../server/scss/layout/_grid-columns.scss */
   [class^="grid-col--"] {
     float: left;
     min-height: 1px;
     padding-left: 10px;
     padding-right: 10px;
   }
-  /* line 45, ../server/scss/utilities/_mixins.scss */
+  /* line 67, ../server/scss/utilities/_mixins.scss */
   [class^="grid-col--"] + [class^="grid-col--"] {
     margin-left: 2%;
   }
-  /* line 26, ../server/scss/layout/_grid-columns.scss */
+  /* line 21, ../server/scss/layout/_grid-columns.scss */
   [class^="grid-col--"]:last-of-type {
     float: right;
   }

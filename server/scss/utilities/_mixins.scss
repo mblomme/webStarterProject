@@ -14,6 +14,28 @@
     }
 }
 
+// Media Queries
+@mixin mq($break) {
+    @if $break == "small" {
+        @media(min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+            @content;
+        }
+    }
+    @else if $break == "medium" {
+        @media(min-width: $breakpoint-md + 1) {
+            @content;
+        }
+    }
+    @else if $break == "large" {
+        @media(min-width: $breakpoint-lg) {
+            @content;
+        }
+    }
+    @else {
+        @error "MQ mixin: invalid value for `#{$break}`";
+    }
+}
+
 // Generating :before or :after pseudo-element shapes
 @mixin p-el(
 $el,
@@ -45,5 +67,17 @@ $el-h: null) {
     & + & {
         margin-left: $margin;
         @content;
+    }
+}
+
+// Grid columns
+@mixin g-columns {
+    @for $i from 1 through $g-col-count {
+        $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
+        $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+        // Generate column modifier classes
+        &--#{$i} {
+            width: percentage($target /$context);
+        }
     }
 }
