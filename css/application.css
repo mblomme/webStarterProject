@@ -156,3 +156,31 @@ h1 {
     max-width: 1050px;
   }
 }
+
+@media (min-width: 1px) and (max-width: 768px) {
+  /* line 1, ../server/scss/state/_collapsed.scss */
+  .is-collapsed-mobile {
+    visibility: collapse;
+    padding: 0px;
+    height: 0;
+    margin: 0;
+    line-height: 0;
+  }
+}
+
+@media (min-width: 1px) and (max-width: 768px) {
+  /* line 1, ../server/scss/state/_grid-displayed.scss */
+  .is-displayed-mobile {
+    display: block;
+  }
+  /* line 5, ../server/scss/state/_grid-displayed.scss */
+  .is-hidden-mobile {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  /* line 1, ../server/scss/state/_grid-displayed.scss */
+  .is-displayed-mobile {
+    display: none;
+  }
+}
