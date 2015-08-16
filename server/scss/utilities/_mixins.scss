@@ -63,7 +63,7 @@ $el-h: null) {
     display: $disp;
 }
 
-@mixin double($margin: 1em) {
+@mixin doubly($margin: 1em) {
     & + & {
         margin-left: $margin;
         @content;
@@ -73,11 +73,11 @@ $el-h: null) {
 // Grid columns
 @mixin g-columns {
     @for $i from 1 through $g-col-count {
-        $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
+        $context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;  
         $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
         // Generate column modifier classes
         &--#{$i} {
-            width: percentage($target /$context);
+            width: percentage($target / $context);
         }
     }
 }
